@@ -1,0 +1,20 @@
+thrift-decoder - a small utility for analysing the structure of thrift packets
+
+Given a file containing a single thrift message, thrift-decoder prints the id,
+type and value for all fields within. This can be useful when analysing an
+unknown protocol, to either reverse engineer it, or to recover its definitions
+if they have been lost.
+
+
+Known deficiencies
+
+  * Some data types are not implemented: double, map, set, list, enum.
+    I only implemented those that were immediately useful for me.
+  * Lack of error handling. Malformed packets will likely crash thrift-decoder.
+
+If you'd like to address one of the above issues, pull requests are welcome.
+
+
+License
+
+thrift-decoder is released under the ISC license.
